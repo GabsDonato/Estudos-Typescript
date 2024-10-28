@@ -1,12 +1,9 @@
 import { Card } from './components/Card';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
+import { Layout } from './components/Layout';
 
 function App() {
   return (
-    <>
-     <Header />
-    <div>
+    <Layout>
     <Card 
     id={1}
     paragraph='Typescript'
@@ -22,10 +19,7 @@ function App() {
     paragraph='SQL'
     details='SQL para banco de dados' 
     />  
-     </div>
-     <Footer />
-     
-    </>
+    </Layout>
   );
 }
 
