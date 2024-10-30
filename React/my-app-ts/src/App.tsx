@@ -1,7 +1,6 @@
 import { Layout } from './components/Layout';
 import styled from 'styled-components';
-import { Provider } from "@/components/ui/provider";
-
+import { ChakraProvider } from '@chakra-ui/react'
 
 const Box = styled.div`
  background-color: orange;
@@ -11,7 +10,7 @@ const Box = styled.div`
 
 function App() {
   return (
-    <Provider>
+    <ChakraProvider>
           <Layout>
           <Box>
           <h1>Faça o login</h1>
@@ -29,7 +28,7 @@ function App() {
             Entrar
           </button>
         </Layout>
-      </Provider>
+      </ChakraProvider>
   );
 }
 
