@@ -1,5 +1,7 @@
 import { Layout } from './components/Layout';
 import styled from 'styled-components';
+import { Provider } from "@/components/ui/provider";
+
 
 const Box = styled.div`
  background-color: orange;
@@ -9,23 +11,25 @@ const Box = styled.div`
 
 function App() {
   return (
-    <Layout>
-      <Box>
-      <h1>Faça o login</h1>
-      </Box>
-      <label htmlFor='emailInput' >
-        Email
-      </label>
-      <input id='emailInput' type='email' />
+    <Provider>
+          <Layout>
+          <Box>
+          <h1>Faça o login</h1>
+          </Box>
+          <label htmlFor='emailInput' >
+            Email
+          </label>
+          <input id='emailInput' type='email' />
 
-      <label htmlFor='passwordInput'>
-        Senha
-      </label>
-      <input id='passwordInput' type='password'/>
-      <button>
-        Entrar
-      </button>
-    </Layout>
+          <label htmlFor='passwordInput'>
+            Senha
+          </label>
+          <input id='passwordInput' type='password'/>
+          <button>
+            Entrar
+          </button>
+        </Layout>
+      </Provider>
   );
 }
 
